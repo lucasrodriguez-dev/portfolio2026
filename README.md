@@ -1,22 +1,21 @@
-# Math
+# Portfolio
 
-App for performing advanced mathematical operations.
+My personal portfolio, where I show projects I work on.
 
 ---
-
+<!-->
 ## Demo
-[live demo](https://math-luthi.netlify.app)
-
+[live demo](https://lucasrodriguez.netlify.app)
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1b65314c-d620-43ef-81b1-a49cddc5a2ac" />
-
 ---
+<!-->
 
 ## Table of contents
 - [Technologies](#technologies)
 - [Requirements](#requirements)
 - [Installation and Execution](#installation-and-execution)
 - [Structure](#structure)
-- [Functionalities](#functionalities)
+- [Sections](#sections)
 - [Deployment](#deployment)
 - [Roadmap](#roadmap)
 - [Authors](#authors)
@@ -72,20 +71,15 @@ App for performing advanced mathematical operations.
 
 ---
 
-## Functionalities
+## Sections
 
-- Prime factorization
-- Base change
-- Greatest common divisor
-- Least common divisor
-- Number of divisors
-- Congruence equations
-- Diophantine equations
-- Internal product
-- Norm
+- Experience
+- Projects
+- Studies
+- Contact
 
 ---
-
+<!-->
 ## Roadmap
 
 - [ ] New discrete functions:
@@ -100,6 +94,7 @@ App for performing advanced mathematical operations.
   - [ ] integral 
 
 ---
+<!-->
 
 ## Authors
 
