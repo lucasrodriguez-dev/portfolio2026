@@ -1,0 +1,50 @@
+<header class="sticky top-0 flex items-center justify-between py-3">
+    <a href="/">Math</a>
+    <button id="btn-menu" class="md:hidden focus:outline-none">☰</button>
+    <nav class="flex-row hidden md:flex md:gap-12">
+        <a href="/discrete">Matemática Discreta</a>
+        <a href="/calculus">Cálculo Diferencial e Integral</a>
+        <a href="/linear_algebra">Álgebra Lineal</a>
+        <a href="/alphabet">Alfabeto Matemático</a>
+    </nav>
+    <div id="menu-mobile" class="absolute left-0 flex flex-col items-start w-full gap-4 py-4 transition-all origin-top scale-y-0 shadow-md top-full bg-white/96 backdrop-blur-3xl text-text px-global">
+        <a href="/discrete">Matemática Discreta</a>
+        <a href="/calculus">Cálculo Diferencial e Integral</a>
+        <a href="/linear_algebra">Álgebra Lineal</a>
+        <a href="/alphabet">Alfabeto Matemático</a>
+    </div>
+</header>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById('btn-menu');
+    const mobileMenu = document.getElementById('menu-mobile');
+
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('scale-y-0');
+        mobileMenu.classList.toggle('scale-y-100');
+    };
+
+    const closeMenu = () => {
+        mobileMenu.classList.add('scale-y-0');
+        mobileMenu.classList.remove('scale-y-100');
+    };
+
+    menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+            closeMenu();
+        }
+    });
+    });
+</script>
