@@ -6,7 +6,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<h1>Bienvenido a Math 👋</h1>
+	<h1>Lucas Rodríguez</h1>
+	<h2>IT Technician</h2>
 	<section class="grid grid-cols-1 gap-10 mt-5 mb-5 md:mb-0 lg:mb-0 xl:mb-0 md:grid-cols-3 md:gap-0">
 		<article class="md:col-span-1">
 			<p class="mb-5">Calcule en el área de la matemática que necesite</p>
@@ -21,20 +22,6 @@ import Layout from '../layouts/Layout.astro';
 					<a href="/linear_algebra" class="btn-secondary">Álgebra Lineal</a>
 				</li>
 			</ul>
-		</article>
-		<article class="section-math-article md:col-span-2">
-			<article id="article-prime" class="math-article">
-            	<h2>Factorización en Primos</h2>
-            	<Prime client:load/>
-        	</article>        
-			<article id="article-basechange" class="math-article">
-            	<h2>Cambio de Base</h2>
-            	<BaseChange client:load/>
-        	</article>
-			<article id="article-mcd" class="math-article">
-            	<h2>Máximo Común Divisor</h2>
-            	<MCD client:load/>
-        	</article>
 		</article>
 	</section>
 	<a href="/discrete" class="btn-link btn-super md:hidden lg:hidden xl:hidden">Prueba más funciones 🚀</a>
