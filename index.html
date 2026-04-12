@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1><a href="/">LR</a></h1>
+        <h1><a href="#home">LR</a></h1>
         <input type="checkbox" id="theme-toggle">
         <label for="theme-toggle" id="theme-icon">🌙 / 🔆</label>
         <input type="checkbox" id="menu-toggle" />
@@ -23,7 +23,7 @@
             <a href="#about-me">About me</a>
         </nav>
     </header>
-    <div class="layout">
+    <div class="layout" id="home">
         <aside>
             <div class="avatar">
                 <img src="images/me.png" alt="Lucas Rodríguez">
@@ -81,17 +81,27 @@
             </a>
         </aside>
         <main>
-            <section id="projects"></section>
-            <section id="experience"></section>
-            <section id="education"></section>
-            <section id="skills"></section>
-            <section id="about-me"></section>
+            <section id="projects">
+                <h2>Projects</h2>
+            </section>
+            <section id="experience">
+                <h2>Experience</h2>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+            </section>
+            <section id="about-me">
+                <h2>About me</h2>
+            </section>
         </main>
     </div>
     <footer>
         <ul>
             <li id="home-link">
-                <a href="/">Lucas Rodríguez de Pena</a>
+                <a href="#home">Lucas Rodríguez de Pena</a>
             </li>
             <li>
                 <a href="https://wa.me/59894349660" target="_blank" rel="noopener noreferrer" class="social-link">
