@@ -1,17 +1,79 @@
 :root {
     --header-height: 10vh;
-    --bg: #f6f8fa;
-    --bg-rgb: 246, 248, 250;
-    --text: #333;
-    --highlight: darkred;
-    --borderColor: #d1d9e0;
-    --selectionBg: rgb(12, 23, 53);
-    --selectionText: #eee;
+
+    /*LIGHT*/
+    --bg-light: #f6f8fa;
+    --bg-rgb-light: 246, 248, 250;
+    --text-light: #333;
+    --highlight-light: darkred;
+    --borderColor-light: #d1d9e0;
+    --selectionBg-light: rgb(12, 23, 53);
+    --selectionText-light: #eee;
+
+    /*DARK*/
+    --bg-dark: #0d1117;
+    --bg-rgb-dark: 13, 17, 23;
+    --text-dark: #f0f6fd;
+    --highlight-dark: #4c93f8;
+    --borderColor-dark: #3d444e;
+    --selectionBg-dark: rgb(30, 225, 215);
+    --selectionText-dark: #333;
+
+    /*DEFAULT VALUES*/
+    --bg: var(--bg-light);
+    --bg-rgb: var(--bg-rgb-light);
+    --text: var(--text-light);
+    --highlight: var(--highlight-light);
+    --borderColor: var(--borderColor-light);
+    --selectionBg: var(--selectionBg-light);
+    --selectionText: var(--selectionText-light);
+}
+
+/*SYSTEM DARK*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: var(--bg-dark);
+        --bg-rgb: var(--bg-rgb-dark);
+        --text: var(--text-dark);
+        --highlight: var(--highlight-dark);
+        --borderColor: var(--borderColor-dark);
+        --selectionBg: var(--selectionBg-dark);
+        --selectionText: var(--selectionText-dark);
+    }
+}
+
+/*LIGHT -> DARK*/
+body:has(#theme-toggle:checked) {
+    --bg: var(--bg-dark);
+    --bg-rgb: var(--bg-rgb-dark);
+    --text: var(--text-dark);
+    --highlight: var(--highlight-dark);
+    --borderColor: var(--borderColor-dark);
+    --selectionBg: var(--selectionBg-dark);
+    --selectionText: var(--selectionText-dark);
+}
+
+/*DARK -> LIGHT*/
+@media (prefers-color-scheme: dark) {
+    body:has(#theme-toggle:checked) {
+        --bg: var(--bg-light);
+        --bg-rgb: var(--bg-rgb-light);
+        --text: var(--text-light);
+        --highlight: var(--highlight-light);
+        --borderColor: var(--borderColor-light);
+        --selectionBg: var(--selectionBg-light);
+        --selectionText: var(--selectionText-light);
+    }
 }
 
 html,
 body {
     margin: 0;
+}
+
+*,
+body {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 * {
@@ -34,16 +96,6 @@ body {
     background-color: var(--bg);
     color: var(--text);
     text-decoration: none;
-}
-
-body:has(#theme-toggle:checked) {
-    --bg: #0d1117;
-    --bg-rgb: 13, 17, 23;
-    --text: #f0f6fd;
-    --highlight: #4c93f8;
-    --borderColor: #3d444e;
-    --selectionBg: rgb(30, 225, 215);
-    --selectionText: #333;
 }
 
 ::selection {
