@@ -1,3 +1,14 @@
+:root {
+    --header-height: 10vh;
+    --bg: #f6f8fa;
+    --bg-rgb: 246, 248, 250;
+    --text: #333;
+    --highlight: darkred;
+    --borderColor: #d1d9e0;
+    --selectionBg: rgb(12, 23, 53);
+    --selectionText: #eee;
+}
+
 html,
 body {
     margin: 0;
@@ -20,12 +31,24 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #f6f8fa;
+    background-color: var(--bg);
+    color: var(--text);
+    text-decoration: none;
+}
+
+body:has(#theme-toggle:checked) {
+    --bg: #0d1117;
+    --bg-rgb: 13, 17, 23;
+    --text: #f0f6fd;
+    --highlight: #4c93f8;
+    --borderColor: #3d444e;
+    --selectionBg: rgb(30, 225, 215);
+    --selectionText: #333;
 }
 
 ::selection {
-    background-color: rgb(12, 23, 53);
-    color: #eee;
+    background-color: var(--selectionBg);
+    color: var(--selectionText);
 }
 
 header,
@@ -36,12 +59,13 @@ footer {
 
 header {
     width: 100%;
+    height: var(--header-height);
     background: inherit;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #d1d9e0;
+    border-bottom: 1px solid var(--borderColor);
 }
 
 .layout {
@@ -56,7 +80,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    border-top: 1px solid #d1d9e0;
+    border-top: 1px solid var(--borderColor);
     font-size: small;
 }
 
@@ -70,7 +94,7 @@ a,
 p,
 span,
 ul {
-    color: #333;
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -81,14 +105,18 @@ ul {
 
 .tabs {
     position: absolute;
-    top: 80px;
+    top: var(--header-height);
     left: 0;
     width: 100%;
     margin: 0;
+    padding: 10px 0;
+    border: 1px solid var(--borderColor);
     display: none;
     flex-direction: column;
-    background-color: #eee;
     z-index: 10;
+    background: rgba(var(--bg-rgb), 0.6);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
 }
 
 .tabs a {
@@ -96,27 +124,35 @@ ul {
 }
 
 .tabs>*:not(:last-child) {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--borderColor);
 }
 
+#theme-toggle,
 #menu-toggle {
     display: none;
 }
 
-#menu-toggle:checked+.menu-icon+.tabs {
+#menu-toggle:checked+#menu-icon+.tabs {
     display: flex;
 }
 
-.menu-icon {
+#theme-icon {
+    user-select: none;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: 24px;
+}
+
+#menu-icon {
     font-size: 2rem;
 }
 
 .avatar {
     width: 200px;
     height: 200px;
-    border: 1px solid currentColor;
+    border: 1px solid var(--borderColor);
     border-radius: 50%;
-    background-color: #eee;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,7 +175,7 @@ aside p {
 }
 
 .intext-link {
-    color: darkred;
+    color: var(--highlight);
 }
 
 .social-links {
@@ -200,6 +236,10 @@ footer ul li {
         padding: 2rem 20rem;
     }
 
+    header {
+        height: auto;
+    }
+
     .layout {
         flex-direction: row;
     }
@@ -215,18 +255,25 @@ footer ul li {
         flex-direction: row;
     }
 
-    .menu-icon {
+    #menu-icon {
         display: none;
+    }
+
+    #theme-icon {
+        cursor: pointer;
     }
 
     .tabs {
         position: static;
         width: auto;
-        margin-left: auto;
+        padding: 0;
+        border: 0;
         display: flex;
         flex-direction: row;
         gap: 0;
         background: none;
+        backdrop-filter: unset;
+        -webkit-backdrop-filter: unset;
     }
 
     .tabs>*:not(:last-child) {
