@@ -6,68 +6,22 @@ My personal portfolio, where I show projects I work on.
 <!-->
 ## Demo
 [live demo](https://lucasrodriguez.netlify.app)
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1b65314c-d620-43ef-81b1-a49cddc5a2ac" />
+<img width="1902" height="1079" alt="image" src="https://github.com/user-attachments/assets/6beac051-12b4-41e2-86ae-4cec65e29b09" />
+
 ---
 <!-->
 
 ## Table of contents
 - [Technologies](#technologies)
-- [Requirements](#requirements)
-- [Installation and Execution](#installation-and-execution)
-- [Structure](#structure)
 - [Sections](#sections)
-- [Deployment](#deployment)
 - [Roadmap](#roadmap)
 - [Authors](#authors)
 
 ---
 
 ## Technologies
-- TypeScript
-- Astro
-- Tailwind
-
----
-
-## Requirements
-- Node.js >= 18
-- npm o pnpm
-- Git
-
----
-
-## Installation and Execution
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm start`               | Launch your app built locally                    |
-
----
-
-## Structure
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── functions/
-│   ├── icons/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-│       └── ...
-│   ├── styles/
-│   ├── types/
-└── package.json
-└── ...
-```
+- HTML5
+- CSS3
 
 ---
 
@@ -82,16 +36,11 @@ My personal portfolio, where I show projects I work on.
 <!-->
 ## Roadmap
 
-- [ ] New discrete functions:
-  - [ ] factorial 
-  - [ ] combinations
-  - [ ] combinations with repetition
-  - [ ] permutations
-  - [ ] permutations with repetition
-- [ ] Add toggle button for changing bases in base change function 
-- [ ] New calculus functions:
-  - [ ] derivative
-  - [ ] integral 
+- [ ] New sections:
+  - [ ] Education 
+  - [ ] Skills
+  - [ ] About me
+- [ ] Fix reponsive for tablets and iPads
 
 ---
 <!-->
