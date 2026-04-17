@@ -6,7 +6,7 @@
     --bg-rgb-light: 246, 248, 250;
     --text-light: #333;
     --text-rgb-light: 51, 51, 51;
-    --highlight-light: darkred;
+    --highlight-light: #4c6bf8; /*darkred*/
     --borderColor-light: #d1d9e0;
     --selectionBg-light: rgb(12, 23, 53);
     --selectionText-light: #eee;
@@ -173,6 +173,12 @@ ul {
     text-decoration: none;
 }
 
+code {
+    background-color: lightgray;
+    color: var(--text-light);
+    padding: 0 .2rem;
+}
+
 nav,
 ul {
     list-style: none;
@@ -256,6 +262,10 @@ aside p {
 }
 
 .intext-link {
+    color: var(--highlight);
+}
+
+.highlight {
     color: var(--highlight);
 }
 
@@ -477,6 +487,13 @@ footer ul li {
 .skills-card-body-card img {
     width: 5rem;
     height: 5rem;
+}
+
+#workflow {
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
 }
 
 /* 🖥️ Desktop */
