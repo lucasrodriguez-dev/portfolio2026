@@ -36,12 +36,8 @@ My personal portfolio, where I show projects I work on.
 ---
 <!-->
 ## Roadmap
-
-- [ ] New sections:
-  - [ ] Education 
-  - [ ] Skills
-  - [ ] About me
 - [ ] Fix reponsive for tablets and iPads
+- [ ] Toggle language button
 
 ---
 <!-->
