@@ -28,10 +28,11 @@ My personal portfolio, where I show projects I work on.
 
 ## Sections
 
-- Experience
 - Projects
-- Studies
-- Contact
+- Experience
+- Education
+- Skills
+- About me
 
 ---
 <!-->
