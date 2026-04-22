@@ -5,8 +5,9 @@ My personal portfolio, where I show projects I work on.
 ---
 <!-->
 ## Demo
-[live demo](https://lucasrodriguez.netlify.app)
-<img width="1902" height="1079" alt="image" src="https://github.com/user-attachments/assets/6beac051-12b4-41e2-86ae-4cec65e29b09" />
+[📌 Check it out](https://lucasrodriguez.netlify.app)
+<img width="1920" height="1080" alt="lucas rodriguez portfolio image" src="https://github.com/user-attachments/assets/193b656c-f9e1-4a43-bffa-c655c082a2ce" />
+
 
 ---
 <!-->
