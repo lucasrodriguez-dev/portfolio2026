@@ -428,7 +428,7 @@ footer ul li {
 .experience-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .experience-card {
@@ -481,7 +481,7 @@ footer ul li {
 .education-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;   
+    gap: 2rem;   
 }
 
 .education-card {
@@ -533,6 +533,12 @@ footer ul li {
 .skills-card-body-card img {
     width: 5rem;
     height: 5rem;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #workflow {
