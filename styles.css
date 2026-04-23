@@ -519,7 +519,7 @@ footer ul li {
 .skills-card-body-card {
     overflow: hidden;
     width: 6rem;
-    height: 10rem;
+    height: 8rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -531,8 +531,8 @@ footer ul li {
 }
 
 .skills-card-body-card img {
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .about-me-container {
@@ -655,6 +655,6 @@ footer ul li {
     }
 
     .skills-card-body-card {
-        width: 10rem;
+        width: 8rem;
     }
 }
