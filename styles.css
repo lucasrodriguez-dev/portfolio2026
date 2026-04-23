@@ -16,7 +16,7 @@
     --bg-rgb-dark: 13, 17, 23;
     --text-dark: #f0f6fd;
     --text-rgb-dark: 240, 246, 253;
-    --highlight-dark: #4c93f8;
+    --highlight-dark: #60baff;/*#4c93f8;*/
     --borderColor-dark: #3d444e;
     --selectionBg-dark: rgb(30, 225, 215);
     --selectionText-dark: #333;
@@ -333,8 +333,16 @@ footer ul li {
 .project {
     border: 1px solid var(--borderColor);
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(var(--text-rgb),0.1);
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project:hover {
+    border-color: var(--highlight-dark);
+}
+
+.project:hover .project-title {
+    color: var(--highlight-dark);
 }
 
 .project-media {
@@ -347,6 +355,11 @@ footer ul li {
     object-fit: cover;
     display: block;
     filter: brightness(.8);
+    transition: all 0.3s ease;
+}
+
+.project:hover .project-media img {
+    transform: scale(1.1);
 }
 
 .project-title {
